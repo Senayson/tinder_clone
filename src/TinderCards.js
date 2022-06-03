@@ -1,10 +1,30 @@
-import React from "react";
+import React, {useState} from "react";
 import TinderCard from "react-tinder-card";
 
+
 const TinderCards = () => {
+
+    const [people, setPeople] = useState([
+        {
+            name: 'steve jobs',
+            url: ''
+        }, 
+        {
+            name: 'mark zuckerberg',
+            url: ''
+        }
+    ]);
+
     return(
         <div>
-            <h1>TinderCards</h1>
+            <h1>Tinder cards</h1>
+            {people.map(person => (
+               <TinderCard>
+                   <div style={{backgroundImage: `url(${person.url})`}}className="card">
+                       <h3> {person.name}</h3>
+                   </div>
+               </TinderCard> 
+            ))}
         </div>
     )
 };

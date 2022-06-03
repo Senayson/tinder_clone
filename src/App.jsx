@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Header from './Header.jsx';
 // import { RemoveCircleOutlineSharp } from '@mui/icons-material';
-import TinderCards from './TinderCards';
+import TinderCards from './TinderCards.js';
 
 function App() {
   return (
